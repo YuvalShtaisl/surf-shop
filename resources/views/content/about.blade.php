@@ -32,7 +32,7 @@
                         </div>
                         <div class="col-sm-8">
                             <div class="image">
-                                <img src="images/about.jpg" class="img-responsive">
+                                <img src="img/about.jpg" class="img-responsive">
                             </div>
                         </div>
                     </div><!-- /.block -->
@@ -40,7 +40,7 @@
                     <div class="block clearfix">
                         <div class="col-sm-8">
                             <div class="image">
-                                <img src="images/open.jpeg" class="img-responsive">
+                                <img src="img/open.jpeg" class="img-responsive">
                             </div>
                         </div>
                         <div class="col-sm-4">
@@ -68,7 +68,7 @@
                         <div class="row">
                             <div class="col-sm-3">
                                 <div class="author">
-                                    <img src="build/img/users/8.jpg">
+                                    <img src="img/users/8.jpg">
                                     <h3>Hussam</h3>
                                     <p>Web Developer</p>
                                     <ul class="social">
@@ -82,7 +82,7 @@
 
                             <div class="col-sm-3">
                                 <div class="author">
-                                    <img src="build/img/users/7.jpg">
+                                    <img src="img/users/7.jpg">
                                     <h3>Toyler</h3>
                                     <p>Product Designer</p>
                                     <ul class="social">
@@ -94,7 +94,7 @@
 
                             <div class="col-sm-3">
                                 <div class="author">
-                                    <img src="build/img/users/5.jpg">
+                                    <img src="img/users/5.jpg">
                                     <h3>Kevin</h3>
                                     <p>Creative Director</p>
                                     <ul class="social">
@@ -106,7 +106,7 @@
 
                             <div class="col-sm-3">
                                 <div class="author">
-                                    <img src="build/img/users/6.jpg">
+                                    <img src="img/users/6.jpg">
                                     <h3>Alex</h3>
                                     <p>Web Designer</p>
                                     <ul class="social">

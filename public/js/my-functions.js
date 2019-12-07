@@ -12,4 +12,5 @@ function ajaxAddToCart(productId) {
     },function (res) {
         return 0;
     });
+
 }

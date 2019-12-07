@@ -60,7 +60,7 @@
                                             <div class="media-left pull-left">
                                                 <a href="#">
                                                     <img class="media-object img-responsive"
-                                                         src="build/img/products/20.jpg">
+                                                         src="img/products/20.jpg">
                                                 </a>
                                             </div>
                                             <div class="media-body">
@@ -89,32 +89,32 @@
                                 <ul class="row">
                                     <li class="col-xs-4">
                                         <a href="#!">
-                                            <img src="build/img/products/23.jpg" class="img-responsive" alt="">
+                                            <img src="img/products/23.jpg" class="img-responsive" alt="">
                                         </a>
                                     </li>
                                     <li class="col-xs-4">
                                         <a href="#!">
-                                            <img src="build/img/products/20.jpg" class="img-responsive" alt="">
+                                            <img src="img/products/20.jpg" class="img-responsive" alt="">
                                         </a>
                                     </li>
                                     <li class="col-xs-4">
                                         <a href="#!">
-                                            <img src="build/img/products/18.jpg" class="img-responsive" alt="">
+                                            <img src="img/products/18.jpg" class="img-responsive" alt="">
                                         </a>
                                     </li>
                                     <li class="col-xs-4">
                                         <a href="#!">
-                                            <img src="build/img/products/19.jpg" class="img-responsive" alt="">
+                                            <img src="img/products/19.jpg" class="img-responsive" alt="">
                                         </a>
                                     </li>
                                     <li class="col-xs-4">
                                         <a href="#!">
-                                            <img src="build/img/products/24.jpg" class="img-responsive" alt="">
+                                            <img src="img/products/24.jpg" class="img-responsive" alt="">
                                         </a>
                                     </li>
                                     <li class="col-xs-4">
                                         <a href="#!">
-                                            <img src="build/img/products/12.jpg" class="img-responsive" alt="">
+                                            <img src="img/products/12.jpg" class="img-responsive" alt="">
                                         </a>
                                     </li>
                                 </ul>
@@ -129,7 +129,7 @@
                             <div class="product col-md-4 col-sm-6 col-xs-12" data-product-id="1">
                                 <div class="inner-product">
                                     <div class="product-thumbnail">
-                                        <img src="{{asset('images/' . $product->pimage)}}"
+                                        <img src="{{asset('img/' . $product->pimage)}}"
                                              class="img-responsive"
                                              alt="">
                                     </div>

@@ -21,7 +21,7 @@
                     @foreach($categories as $category)
                         <div class="col-sm-6 collection">
                             <a href="{{url('shop/' .$category['curl'])}}">
-                                <img src="{{asset('images/' . $category['cimage'])}}" class="img-responsive"
+                                <img src="{{asset('img/' . $category['cimage'])}}" class="img-responsive"
                                      alt="">
                             </a>
                         </div><!-- /.collection -->

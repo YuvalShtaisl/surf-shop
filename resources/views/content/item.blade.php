@@ -26,13 +26,13 @@
                         <div class="product-thumbnail">
                             <a href="{{url('shop/'. $product->purl. '/'. $product->purl)}}" class="fancybox"
                                rel="gallery">
-                                <img src="{{asset('images/' . $product->pimage)}}" class="img-responsive">
+                                <img src="{{asset('img/' . $product->pimage)}}" class="img-responsive">
                             </a>
                         </div>
                         <div class="product-images-carousel">
                             <div class="item">
-                                <a href="build/img/products/1.jpg" class="fancybox" rel="gallery">
-                                    <img src="build/img/products/1.jpg" class="img-responsive">
+                                <a href="img/products/1.jpg" class="fancybox" rel="gallery">
+                                    <img src="img/products/1.jpg" class="img-responsive">
                                 </a>
                             </div>
                         </div>
@@ -158,7 +158,7 @@
                                                     <div class="media-left media-middle">
                                                         <a href="#!">
                                                             <img class="media-object avatar"
-                                                                 src="build/img/users/1.jpg">
+                                                                 src="img/users/1.jpg">
                                                         </a>
                                                     </div>
                                                     <div class="media-body">
@@ -220,7 +220,7 @@
                     <div class="inner-product">
                         <span class="onsale">Sale!</span>
                         <div class="product-thumbnail">
-                            <img src="build/img/products/2.jpg" class="img-responsive" alt="">
+                            <img src="img/products/2.jpg" class="img-responsive" alt="">
                         </div>
                         <div class="product-details text-center">
                             <div class="product-btns">

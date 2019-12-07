@@ -7,7 +7,7 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper text-center">
                 <!-- Slides -->
-                <div class="swiper-slide" style="background-image: url({{asset('images/home/index1.jpeg')}});">
+                <div class="swiper-slide" style="background-image: url({{asset('img/home/index1.jpeg')}});">
                     <div class="valign-wrapper fullscreen">
                         <div class="valign col-xs-offset-3" data-swiper-parallax="-100">
                             <p>It is a long established fact that a reader will be distracted by the readable content of
@@ -15,7 +15,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-image: url({{asset('images/home/index2.jpg')}});">
+                <div class="swiper-slide" style="background-image: url({{asset('img/home/index2.jpg')}});">
                     <div class="valign-wrapper fullscreen">
                         <div class="valign col-xs-offset-8" data-swiper-parallax="-100">
                             <p>It is a long established fact that a reader will be distracted by the readable content of
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-image: url({{asset('images/home/index3.jpeg')}});">
+                <div class="swiper-slide" style="background-image: url({{asset('img/home/index3.jpeg')}});">
                     <div class="valign-wrapper fullscreen">
                         <div class="valign col-xs-offset-5">
                             <p>It is a long established fact that a reader will be distracted by the readable content of
@@ -47,7 +47,7 @@
                     @foreach($categories as $category)
                         <div class="col-sm-6 collection">
                             <a href="{{url('shop/' .$category['curl'])}}">
-                                <img src="{{asset('images/' . $category['cimage'])}}" class="img-responsive" 
+                                <img src="{{asset('img/' . $category['cimage'])}}" class="img-responsive"
                                      alt="">
                             </a>
                         </div><!-- /.collection -->
@@ -114,7 +114,7 @@
                                 <div class="product col-md-3 col-sm-6 col-xs-12" data-product-id="{{$product['id']}}">
                                     <div class="inner-product">
                                         <div class="product-thumbnail">
-                                            <img src="{{asset('images/' . $product['pimage'])}}" class="img-responsive"
+                                            <img src="{{asset('img/' . $product['pimage'])}}" class="img-responsive"
                                                  alt="">
                                         </div>
                                         <div class="product-details text-center">
@@ -160,31 +160,31 @@
                 <div class="col-xs-12">
                     <div id="logos">
                         <div class="item">
-                            <a href="#!"><img src="build/img/brands/5.png" class="img-responsive" alt=""></a>
+                            <a href="#!"><img src="img/brands/5.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="item">
-                            <a href="#!"><img src="build/img/brands/6.png" class="img-responsive" alt=""></a>
+                            <a href="#!"><img src="img/brands/6.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="item">
-                            <a href="#!"><img src="build/img/brands/4.png" class="img-responsive" alt=""></a>
+                            <a href="#!"><img src="img/brands/4.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="item">
-                            <a href="#!"><img src="build/img/brands/7.png" class="img-responsive" alt=""></a>
+                            <a href="#!"><img src="img/brands/7.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="item">
-                            <a href="#!"><img src="build/img/brands/8.png" class="img-responsive" alt=""></a>
+                            <a href="#!"><img src="img/brands/8.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="item">
-                            <a href="#!"><img src="build/img/brands/9.png" class="img-responsive" alt=""></a>
+                            <a href="#!"><img src="img/brands/9.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="item">
-                            <a href="#!"><img src="build/img/brands/1.png" class="img-responsive" alt=""></a>
+                            <a href="#!"><img src="img/brands/1.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="item">
-                            <a href="#!"><img src="build/img/brands/2.png" class="img-responsive" alt=""></a>
+                            <a href="#!"><img src="img/brands/2.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="item">
-                            <a href="#!"><img src="build/img/brands/3.png" class="img-responsive" alt=""></a>
+                            <a href="#!"><img src="img/brands/3.png" class="img-responsive" alt=""></a>
                         </div>
                     </div>
                 </div>

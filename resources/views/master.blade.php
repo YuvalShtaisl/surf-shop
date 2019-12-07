@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" media="all"
           href="http://fonts.googleapis.com/css?family=Inconsolata:300,400,500,700|Unica+One:300,400,500,700">
     <!-- All theme style -->
-    <link rel="stylesheet" type="text/css" media="all" href="{{asset('lib/Sham/build/css/min.css')}}">
+    <link rel="stylesheet" type="text/css" media="all" href="{{asset('css/min.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css"/>
     <script> var BASE_URL = "{{url('')}}/" </script>
 
@@ -152,32 +152,32 @@
                     <ul class="row">
                         <li class="col-xs-4">
                             <a href="#!">
-                                <img src="build/img/products/23.jpg" class="img-responsive" alt="">
+                                <img src="img/products/23.jpg" class="img-responsive" alt="">
                             </a>
                         </li>
                         <li class="col-xs-4">
                             <a href="#!">
-                                <img src="build/img/products/20.jpg" class="img-responsive" alt="">
+                                <img src="img/products/20.jpg" class="img-responsive" alt="">
                             </a>
                         </li>
                         <li class="col-xs-4">
                             <a href="#!">
-                                <img src="build/img/products/18.jpg" class="img-responsive" alt="">
+                                <img src="img/products/18.jpg" class="img-responsive" alt="">
                             </a>
                         </li>
                         <li class="col-xs-4">
                             <a href="#!">
-                                <img src="build/img/products/19.jpg" class="img-responsive" alt="">
+                                <img src="img/products/19.jpg" class="img-responsive" alt="">
                             </a>
                         </li>
                         <li class="col-xs-4">
                             <a href="#!">
-                                <img src="build/img/products/24.jpg" class="img-responsive" alt="">
+                                <img src="img/products/24.jpg" class="img-responsive" alt="">
                             </a>
                         </li>
                         <li class="col-xs-4">
                             <a href="#!">
-                                <img src="build/img/products/12.jpg" class="img-responsive" alt="">
+                                <img src="img/products/12.jpg" class="img-responsive" alt="">
                             </a>
                         </li>
                     </ul>
@@ -227,7 +227,7 @@
 </a>
 
 <!-- All Theme Scripts -->
-<script type="text/javascript" src="{{asset('lib/Sham/build/js/min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/my-functions.js')}}"></script>
 
 <script type="text/javascript" src="{{asset('js/script.js')}}"></script>
