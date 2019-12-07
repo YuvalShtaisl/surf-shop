@@ -227,8 +227,9 @@
 </a>
 
 <!-- All Theme Scripts -->
-<script type="text/javascript" src="{{asset('js/my-functions.js')}}"></script>
 <script type="text/javascript" src="{{asset('lib/Sham/build/js/min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/my-functions.js')}}"></script>
+
 <script type="text/javascript" src="{{asset('js/script.js')}}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 </body>

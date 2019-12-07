@@ -1,4 +1,3 @@
-import myFumctions from 'my-functions';
 /**
  * add .sticky class if user scroll down.
  */

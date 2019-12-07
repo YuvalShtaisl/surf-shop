@@ -27,4 +27,3 @@
 	Route::get('user/signup','UserController@getSignup');
 	Route::post('user/signup','UserController@postSignup');
 	Route::get('user/logout','UserController@logOut');
-	

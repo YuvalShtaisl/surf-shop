@@ -7,6 +7,7 @@
 	 use App\Product;
 	 use Cart;
 	 use DB;
+	 use Illuminate\Http\Request;
 	 use Session;
 	 use function redirect;
 	 

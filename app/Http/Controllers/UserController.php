@@ -2,12 +2,9 @@
 	 
 	 namespace App\Http\Controllers;
 	 
-	 use App\Http\Middleware\AuthGuard;
 	 use App\Http\Requests\SigninRequest;
 	 use App\Http\Requests\SignupRequest;
 	 use App\User;
-	 use Illuminate\Http\Requests;
-	 use function redirect;
 	 use Session;
 	 
 	 class UserController extends MainController
