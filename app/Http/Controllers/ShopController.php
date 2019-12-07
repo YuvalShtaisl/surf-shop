@@ -34,8 +34,7 @@
 			
 			public function item($curl, $purl)
 			{
-				 Product::getItem($purl,
-						 self::$data);
+				 Product::getItem($purl, self::$data);
 				 if(!empty(self::$data['product']->ptitle)) {
 						self::$data['title'] .= self::$data['product']->ptitle;
 				 }

@@ -1,3 +1,23 @@
+async function ajaxAddToCart(productId) {
+    /*    e.preventDefault();
+        e.stopPropagation();*/
+    let result = await $.ajax({
+        url: BASE_URL + 'shop/add-to-cart',
+        type: 'GET',
+        dataType: 'html',
+        data: {pid: productId},
+    });
+    /*
+    * .then(function (res) {
+        //location.reload();
+        return 'cc';
+    },function (res) {
+        return 'abb';
+    });
+    * */
+    return result;
+
+}
 /**
  * add .sticky class if user scroll down.
  */
@@ -26,7 +46,10 @@ function alignVertical() {
     });
 }
 
+var height = null;
+var padAmount = null;
 function heightCenter() {
+    debugger;
     height = $(window).height();
     padAmount = (height/2.5);
     $('.col-height-center').css('padding-top', padAmount);
@@ -185,11 +208,16 @@ function initializeMap(selector) {
     });
 }
 
-jQuery(document).ready(function() {
-
+$(window).load(function () {
     alignVertical();
     heightCenter();
     stick();
+});
+var values,min,max;
+
+jQuery(document).ready(function() {
+    debugger;
+
 
     $('.shopping-cart .dropdown-menu a').click(function() {
         window.location = $(this).attr('href');
@@ -268,8 +296,8 @@ jQuery(document).ready(function() {
 
     // Rating Stars.
     if ($('.rating-stars').length) {
-        rating = $('.rating-stars').data('rating');
-        readOnly = ($('.rating-stars').attr('readonly'));
+        var rating = $('.rating-stars').data('rating');
+        var readOnly = ($('.rating-stars').attr('readonly'));
         $('.rating-stars').starrr({
             readOnly: readOnly,
             rating : rating,
@@ -294,6 +322,7 @@ jQuery(document).ready(function() {
     /**
      * Flying to cart effect
      */
+    debugger;
     $('.add-to-cart:not(.added)').on('click', function(e) {
         //stop bubbling event
         e.preventDefault();
@@ -327,6 +356,8 @@ jQuery(document).ready(function() {
                 }, 1000, 'easeInOutExpo');
 
             setTimeout(function() {
+                debugger;
+
                 cart.effect("shake", {
                     times: 2
                 }, 400, addToCart(product));
@@ -340,6 +371,7 @@ jQuery(document).ready(function() {
             });
         }
 
+
         $(this).addClass('added');
         $(this).parent().attr('data-original-title', 'Added');
     });
@@ -348,19 +380,21 @@ jQuery(document).ready(function() {
      * Add product to cart and change badge count
      */
     function addToCart(product) {
-        $cart     = $('.shopping-cart');
-        productId = product.attr('product-id');
+        var $cart     = $('.shopping-cart');
+        var productId = product.data('product-id');
         console.dir(productId);
         /*
         * 1- [Add product to 'Application' by AJAX]
         *  - Your AJAX code.
         */
+        debugger;
         if(!ajaxAddToCart(productId)) return;
         // 2- [Add product to shopping cart]
-        product_title = product.find('.product-title').text();
-        product_price = product.find('.product-price').text();
-        product_link  = product.find('.view-details').attr('href');
-        product_img   = product.find('.product-thumbnail img').attr('src');
+        var product_title = product.find('.product-title a').text();
+        var product_price = product.find('.product-price span').text();
+        var product_link  = product.find('.view-details').attr('href');
+        var product_img   = product.find('.product-thumbnail img').attr('src');
+        debugger;
 
         var toCart = '<li>';
         toCart += '<a href="'+ product_link +'"><img src="'+ product_img +'" class="img-responsive product-img"></a>';
@@ -373,15 +407,15 @@ jQuery(document).ready(function() {
         $cart.find('.dropdown-wrap').prepend(toCart);
 
         // 3- [Change badge count]
-        badge = $cart.find('.badge');
+        var badge = $cart.find('.badge');
         badge.text( parseInt(badge.text()) + 1 );
     }
 
     // Custom Quantity Input
     $('.quantity input[type="button"]').on('click', function() {
-        qty = $(this).parent().find('input.qty');
-        qtyVal = parseInt(qty.val());
-        min  = qty.attr('min') ? parseInt(qty.attr('min')) : 1,
+        var qty = $(this).parent().find('input.qty');
+        var qtyVal = parseInt(qty.val());
+        var min  = qty.attr('min') ? parseInt(qty.attr('min')) : 1,
             max  = qty.attr('max') ? parseInt(qty.attr('max')) : null,
             step = qty.attr('step') ? parseInt(qty.attr('step')) : 1;
 
@@ -439,9 +473,9 @@ jQuery(document).ready(function() {
     }
 
     if($('#filter-slider').length) {
-        values = $('#filter-slider').data('values').split(",");
-        max    = $('#filter-slider').data('max');
-        min    = $('#filter-slider').data('min');
+        var values = $('#filter-slider').data('values').split(",");
+        var max    = $('#filter-slider').data('max');
+        var min    = $('#filter-slider').data('min');
 
         $('#filter-slider').slider({
             min: min,
@@ -460,8 +494,8 @@ jQuery(document).ready(function() {
     $('[data-slide-toggle]').on('click', function(e) {
         e.preventDefault();
 
-        $target = $($(this).data('slide-toggle'));
-        parent  = $(this).attr('data-parent');
+        var $target = $($(this).data('slide-toggle'));
+        var parent  = $(this).attr('data-parent');
         if (parent) {
             $(this).parents(parent).find('[data-slide-toggle]').each(function(index, element) {
                 $($(element).data('slide-toggle')).slideUp();
@@ -473,8 +507,8 @@ jQuery(document).ready(function() {
 
     // Custom checkbox and radio.
     $('.checkbox[data-slide-toggle], .radio[data-slide-toggle]').on('click', function(e) {
-        query  = $(this).hasClass('checkbox') ? 'checkbox' : 'radio';
-        $input = $(this).parent().find('>input[type="'+ query +'"]');
+        var query  = $(this).hasClass('checkbox') ? 'checkbox' : 'radio';
+        var $input = $(this).parent().find('>input[type="'+ query +'"]');
 
         if (query == 'radio') {
             $('[name="' + $input.attr('name') + '"]').attr('checked', false).prop('checked', false);
@@ -526,7 +560,7 @@ jQuery(document).ready(function() {
         // Select value and apply changes
         $(this).parents('ul').find('a').removeClass('active');
         $(this).addClass('active');
-        $lang = $(this).html();
+        var $lang = $(this).html();
         $(this).parents('.list-select').find('.selected').html($lang);
     });
 

@@ -4,6 +4,7 @@
 	 
 	 use Cart;
 	 use DB;
+	 use function dd;
 	 use Illuminate\Database\Eloquent\Model;
 	 
 	 class Product extends Model
@@ -24,9 +25,11 @@
 			
 			static public function getItem($purl, &$data)
 			{
-				 $data['product'] = DB::table('products')->where('purl',
-						 '=',
-						 $purl)->first();
+				 $data['product'] = DB::table('products AS p')
+						 			->where('purl', '=', $purl)
+									->join('categories AS c', 'c.id', '=', 'p.categorie_id')
+						      ->select('p.*', 'c.ctitle', 'c.curl')
+						 			->first();
 			}
 			
 			static public function addToCart($pid)

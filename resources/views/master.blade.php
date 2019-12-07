@@ -74,14 +74,18 @@
 
                     <ul class="dropdown-menu">
                         <div class="dropdown-wrap" slim-scroll="√">
-                            <li>
-                                <a href=""><img src="" class="img-responsive product-img" alt=""></a>
-                                <div class="product-details"><p class="product-title clearfix"><a href=""></a></p>
-                                    @if( !Cart::isEmpty() )
-                                    <p class="product-price clearfix"><ins><span class="amount">{{Cart::getTotalQuantity()}}</span></ins></p>
-                                    @endif
-                                </div>
-                            </li>
+                            @foreach(Cart::getContent() as $cartItem)
+                                <li>
+                                    <a href=""><img src="" class="img-responsive product-img" alt=""></a>
+                                    <div class="product-details"><p class="product-title clearfix"><a
+                                                    href="">{{$cartItem->title}}</a></p>
+                                        @if( !Cart::isEmpty() )
+                                            <p class="product-price clearfix"><ins><span
+                                                            class="amount">{{$cartItem->price}}</span></ins></p>
+                                        @endif
+                                    </div>
+                                </li>
+                            @endforeach
                         </div>
                         <li class="dropdown-footer">
                             <a href="{{url('shop/cart')}}">View Cart</a>
@@ -227,7 +231,7 @@
 </a>
 
 <!-- All Theme Scripts -->
-<script type="text/javascript" src="{{asset('js/min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/all.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/my-functions.js')}}"></script>
 
 <script type="text/javascript" src="{{asset('js/script.js')}}"></script>

@@ -24,7 +24,8 @@
                 <div class="col-sm-5">
                     <div class="product-images">
                         <div class="product-thumbnail">
-                            <a href="{{url('shop/'. $product->purl. '/'. $product->purl)}}" class="fancybox"
+                            <a href="{{url('shop/'.$product->curl . '/' . $product->purl)}}"
+                               class="fancybox"
                                rel="gallery">
                                 <img src="{{asset('img/' . $product->pimage)}}" class="img-responsive">
                             </a>

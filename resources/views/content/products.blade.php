@@ -126,7 +126,7 @@
                 <div class="col-md-9">
                     <div class="masonry row">
                         @foreach($products as $product)
-                            <div class="product col-md-4 col-sm-6 col-xs-12" data-product-id="1">
+                            <div class="product col-md-4 col-sm-6 col-xs-12" data-product-id="{{$product->id}}">
                                 <div class="inner-product">
                                     <div class="product-thumbnail">
                                         <img src="{{asset('img/' . $product->pimage)}}"
@@ -151,7 +151,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h3 class="product-title"><a href="{{url('shop/' .$product->ptitle)}}">{{$product->ptitle}}</a></h3>
+                                <h3 class="product-title"><a href="{{url('shop/' . $product->curl .'/'
+                                .$product->purl)}}">{{$product->ptitle}}</a></h3>
                                 <div class="star-rating">
                                     <span style="width:90%"></span>
                                 </div>

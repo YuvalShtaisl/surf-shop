@@ -129,14 +129,15 @@
 											<a href="#!" class="li-icon"><i class="lil-favorite"></i></a>
 										</span>
                                                 <span data-toggle="tooltip" data-placement="top" title="View">
-											<a href="{{url('shop/'. $product->purl. '/'. $product->purl)}}" class="li-icon view-details"><i
+											<a href="{{url('shop/'. $product->curl. '/'. $product->purl)}}"
+                                               class="li-icon view-details"><i
                                                         class="lil-search"></i></a>
 										</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <h3 class="product-title"><a href="{{url('shop/' .$product['purl'])
-                                    }}">{!! $product->ptitle !!}</a></h3>
+                                    <h3 class="product-title"><a href="{{url('shop/' . $product->curl .'/'
+                                .$product->purl)}}">{!! $product->ptitle !!}</a></h3>
                                     <p class="product-price">
                                         <ins>
                                             <span class="amount">{{'$'. $product['price']}}</span>
