@@ -42,7 +42,7 @@
                                         </td>
                                         <td class="product-thumbnail">
                                             <a href="">
-                                                <img src=""
+                                                <img src="{{asset('img/products/'.$item['attributes']['pimage'])}}"
                                                      class="img-responsive">
                                             </a>
                                         </td>
@@ -86,14 +86,16 @@
                                                     <tr class="order-total">
                                                         <th>Total</th>
                                                         <td class="text-right">
-                                                            <strong><span class="amount">${{Cart::getTotal()}}</span></strong>
+                                                            <strong><span
+                                                                        class="amount">${{Cart::getTotal()}}</span></strong>
                                                         </td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
                                                 <div class="form-group clearfix">
                                                     <div class="pull-left">
-                                                        <input type="submit" class="btn btn-primary" value="Update Cart">
+                                                        <input type="submit" class="btn btn-primary"
+                                                               value="Update Cart">
                                                     </div>
                                                     <div class="pull-right text-right">
                                                         <a href="{{url('shop/order')}}" class="btn btn-default">Proceed

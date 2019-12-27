@@ -49,7 +49,6 @@ function alignVertical() {
 var height = null;
 var padAmount = null;
 function heightCenter() {
-    debugger;
     height = $(window).height();
     padAmount = (height/2.5);
     $('.col-height-center').css('padding-top', padAmount);
@@ -216,8 +215,6 @@ $(window).load(function () {
 var values,min,max;
 
 jQuery(document).ready(function() {
-    debugger;
-
 
     $('.shopping-cart .dropdown-menu a').click(function() {
         window.location = $(this).attr('href');
@@ -322,7 +319,6 @@ jQuery(document).ready(function() {
     /**
      * Flying to cart effect
      */
-    debugger;
     $('.add-to-cart:not(.added)').on('click', function(e) {
         //stop bubbling event
         e.preventDefault();
@@ -332,7 +328,7 @@ jQuery(document).ready(function() {
         var cart = $('.shopping-cart'),
             product   = $(this).parents('.product'),
             imgToDrag = product.find("img").eq(0);
-
+        debugger;
         if (imgToDrag) {
             var imgClone = imgToDrag.clone()
                 .offset({
@@ -356,8 +352,6 @@ jQuery(document).ready(function() {
                 }, 1000, 'easeInOutExpo');
 
             setTimeout(function() {
-                debugger;
-
                 cart.effect("shake", {
                     times: 2
                 }, 400, addToCart(product));
@@ -374,6 +368,7 @@ jQuery(document).ready(function() {
 
         $(this).addClass('added');
         $(this).parent().attr('data-original-title', 'Added');
+
     });
 
     /**
@@ -387,14 +382,12 @@ jQuery(document).ready(function() {
         * 1- [Add product to 'Application' by AJAX]
         *  - Your AJAX code.
         */
-        debugger;
         if(!ajaxAddToCart(productId)) return;
         // 2- [Add product to shopping cart]
         var product_title = product.find('.product-title a').text();
         var product_price = product.find('.product-price span').text();
         var product_link  = product.find('.view-details').attr('href');
         var product_img   = product.find('.product-thumbnail img').attr('src');
-        debugger;
 
         var toCart = '<li>';
         toCart += '<a href="'+ product_link +'"><img src="'+ product_img +'" class="img-responsive product-img"></a>';

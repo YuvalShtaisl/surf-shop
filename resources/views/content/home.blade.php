@@ -41,8 +41,6 @@
     <section class="section collections no-padding-bottom" id="home-collections">
         <div class="container">
             <div class="row">
-                <h1>quan:{{\Cart::getTotalQuantity()}}</h1>
-
             @if($categories)
                     @foreach($categories as $category)
                         <div class="col-sm-6 collection">

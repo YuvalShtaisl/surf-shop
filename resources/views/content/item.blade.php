@@ -20,7 +20,7 @@
     </div><!-- /.page-head -->
     <section class="section single-product-wrapper">
         <div class="container">
-            <div class="row">
+            <div class="row product">
                 <div class="col-sm-5">
                     <div class="product-images">
                         <div class="product-thumbnail">
@@ -30,17 +30,17 @@
                                 <img src="{{asset('img/' . $product->pimage)}}" class="img-responsive">
                             </a>
                         </div>
-                        <div class="product-images-carousel">
+{{--                        <div class="product-images-carousel">
                             <div class="item">
                                 <a href="img/products/1.jpg" class="fancybox" rel="gallery">
                                     <img src="img/products/1.jpg" class="img-responsive">
                                 </a>
                             </div>
-                        </div>
+                        </div>--}}
                     </div><!-- /.product-images -->
                 </div>
 
-                <div class="col-sm-6 col-sm-offset-1">
+                <div class="col-sm-6 col-sm-offset-1" href="{{url('shop/' .$product->curl. '/'. $product->purl)}}">
                     <div class="product-details">
                         <div class="rating">
                             <div class="star-rating">
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="product-title">
-                            <h3 class="product-name">{{$product->ptitle}}</h3>
+                            <h3 class="product-name"><a href="">{{$product->ptitle}}</a></h3>
                             <p class="product-available">Available</p>
                             <hr>
                         </div>
