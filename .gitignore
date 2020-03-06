@@ -5,7 +5,7 @@
 /public/js/script.js
 /public/js/app.js
 /public/css/app.css
-
+/_ide_helper.php
 /storage/*.key
 /vendor
 /.idea

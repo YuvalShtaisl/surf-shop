@@ -7,7 +7,27 @@
 	 use Session;
 	 
 	 
-	 class Content extends Model
+	 /**
+ * App\Content
+ *
+ * @property int $id
+ * @property string $title
+ * @property string $article
+ * @property int $menu_id
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @property \Illuminate\Support\Carbon $created_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Content newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Content newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Content query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Content whereArticle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Content whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Content whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Content whereMenuId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Content whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Content whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
+class Content extends Model
 	 {
 			static public function getContent($url, &$data)
 			{

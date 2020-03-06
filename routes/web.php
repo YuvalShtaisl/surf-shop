@@ -51,4 +51,6 @@
 			Route::get('logout','UserController@logOut');
 			
 	 });
+	 
+	 Route::get('{dynamic}','PagesController@dynamicLink');
 	

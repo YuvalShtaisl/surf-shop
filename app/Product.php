@@ -6,7 +6,33 @@
 	 use DB;
 	 use Illuminate\Database\Eloquent\Model;
 	 
-	 class Product extends Model
+	 /**
+ * App\Product
+ *
+ * @property int $id
+ * @property int $categorie_id
+ * @property string $ptitle
+ * @property string $particle
+ * @property float $price
+ * @property string $pimage
+ * @property string $purl
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @property \Illuminate\Support\Carbon $created_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereCategorieId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereParticle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product wherePimage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product wherePtitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product wherePurl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Product whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
+class Product extends Model
 	 {
 			static public function getProducts($curl, &$data)
 			{

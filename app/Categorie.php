@@ -5,7 +5,29 @@
 	 use Illuminate\Database\Eloquent\Model;
 	 use Session;
 	 
-	 class Categorie extends Model
+	 /**
+ * App\Categorie
+ *
+ * @property int $id
+ * @property string $ctitle
+ * @property string $carticle
+ * @property string $curl
+ * @property string $cimage
+ * @property \Illuminate\Support\Carbon $updated_at
+ * @property \Illuminate\Support\Carbon $created_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Categorie newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Categorie newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Categorie query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Categorie whereCarticle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Categorie whereCimage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Categorie whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Categorie whereCtitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Categorie whereCurl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Categorie whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Categorie whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
+class Categorie extends Model
 	 {
 			static public function saveNew($request)
 			{

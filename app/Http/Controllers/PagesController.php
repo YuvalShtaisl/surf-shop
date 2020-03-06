@@ -3,6 +3,7 @@
 	 namespace App\Http\Controllers;
 	 
 	 use App\Categorie;
+	 use App\Menu;
 	 use App\Product;
 	 use Cart;
 	 use function view;
@@ -32,6 +33,17 @@
 			{
 				 self::$data['title'] .= 'about-us';
 				 return view('content.about',
+						 self::$data);
+			}
+			
+			public function dynamicLink($dynamic)
+			{
+				 
+				 self::$data['content'] = Menu::where('url',  '=',  $dynamic)->with('content')->get()->first()
+						 ->content->article;
+				 
+				 self::$data['title'] .= 'about-us';
+				 return view('content.dynamic',
 						 self::$data);
 			}
 	 }
