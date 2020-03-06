@@ -5,6 +5,6 @@ namespace App\Http\Controllers;
 class CmsController extends MainController
 {
     public function dashBoard(){
-    	return view('cms/cms_master',self::$data);
+    	return view('cms.dashboard',self::$data);
 		}
 }

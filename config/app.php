@@ -160,6 +160,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 	    	Darryldecode\Cart\CartServiceProvider::class,
+				Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -210,7 +211,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 	      'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
-
+				'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

@@ -30,13 +30,13 @@
                                 <img src="{{asset('img/' . $product->pimage)}}" class="img-responsive">
                             </a>
                         </div>
-{{--                        <div class="product-images-carousel">
+                     <div class="product-images-carousel">
                             <div class="item">
                                 <a href="img/products/1.jpg" class="fancybox" rel="gallery">
                                     <img src="img/products/1.jpg" class="img-responsive">
                                 </a>
                             </div>
-                        </div>--}}
+                        </div>
                     </div><!-- /.product-images -->
                 </div>
 

@@ -55,6 +55,41 @@
         </div><!-- /.container -->
     </section><!-- /.collections -->
 
+    {{--<section class="section collections no-padding-bottom" id="home-collections">--}}
+        {{--<div class="container">--}}
+            {{--@if($categories)--}}
+                {{--@foreach($categories as $category)--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-sm-6 collection">--}}
+                    {{--<a href="{{url('shop/' .$category['curl'])}}">--}}
+                        {{--<img src="{{asset('img/' . $category['cimage'])}}" class="img-responsive" alt="">--}}
+                    {{--</a>--}}
+                {{--</div><!-- /.collection -->--}}
+                {{--<div class="col-sm-6">--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-sm-6 collection">--}}
+                            {{--<a href="{{url('shop/' .$category['curl'])}}">--}}
+                                {{--<img src="{{asset('img/' . $category['cimage'])}}" class="img-responsive" alt="">--}}
+                            {{--</a>--}}
+                        {{--</div><!-- /.collection -->--}}
+                        {{--<div class="col-sm-6 collection">--}}
+                            {{--<a href="{{url('shop/' .$category['curl'])}}">--}}
+                                {{--<img src="{{asset('img/' . $category['cimage'])}}" class="img-responsive" alt="">--}}
+                            {{--</a>--}}
+                        {{--</div><!-- /.collection -->--}}
+                        {{--<div class="col-sm-12 collection">--}}
+                            {{--<a href="{{url('shop/' .$category['curl'])}}">--}}
+                                {{--<img src="{{asset('img/' . $category['cimage'])}}" class="img-responsive" alt="">--}}
+                            {{--</a>--}}
+                        {{--</div><!-- /.collection -->--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div><!-- /.row -->--}}
+                {{--@endforeach--}}
+            {{--@endif--}}
+        {{--</div><!-- /.container -->--}}
+    {{--</section><!-- /.collections -->--}}
+
     <section class="section promotions no-padding-bottom small-padding-top" id="promotions">
         <div class="container">
             <div class="row">
@@ -122,10 +157,7 @@
                                                data-id="{{$product['id']}}"><i
                                                         class="lil-shopping_cart"></i></a>
 										</span>
-                                                <span data-toggle="tooltip" data-placement="top"
-                                                      title="Add to Favorites">
-											<a href="#!" class="li-icon"><i class="lil-favorite"></i></a>
-										</span>
+
                                                 <span data-toggle="tooltip" data-placement="top" title="View">
 											<a href="{{url('shop/'. $product->curl. '/'. $product->purl)}}"
                                                class="li-icon view-details"><i
@@ -153,41 +185,4 @@
         </div><!-- /.container -->
     </section><!-- /.products -->
 
-    <section class="section brands no-padding-top" id="brands">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div id="logos">
-                        <div class="item">
-                            <a href="#!"><img src="img/brands/5.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="item">
-                            <a href="#!"><img src="img/brands/6.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="item">
-                            <a href="#!"><img src="img/brands/4.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="item">
-                            <a href="#!"><img src="img/brands/7.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="item">
-                            <a href="#!"><img src="img/brands/8.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="item">
-                            <a href="#!"><img src="img/brands/9.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="item">
-                            <a href="#!"><img src="img/brands/1.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="item">
-                            <a href="#!"><img src="img/brands/2.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="item">
-                            <a href="#!"><img src="img/brands/3.png" class="img-responsive" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- /#brands -->
 @endsection

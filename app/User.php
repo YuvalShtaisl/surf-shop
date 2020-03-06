@@ -32,7 +32,7 @@
 							 Session::put('user_name',
 									 $user->name);
 							 Session::flash('sm',
-									 'Welcom Back ',
+									 'Welcom Back',
 									 $user->name);
 							 
 						}

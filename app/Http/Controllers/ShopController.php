@@ -12,14 +12,13 @@
 	 use function redirect;
 	 
 	 
-	 
 	 class ShopController extends MainController
 	 {
 			public function categories()
 			{
 				 
-				 self::$data['categories'] = Categorie::all()->toArray();
 				 self::$data['title'] .= 'Shop Categories';
+				 
 				 return view('content.categories',
 						 self::$data);
 			}
@@ -34,7 +33,8 @@
 			
 			public function item($curl, $purl)
 			{
-				 Product::getItem($purl, self::$data);
+				 Product::getItem($purl,
+						 self::$data);
 				 if(!empty(self::$data['product']->ptitle)) {
 						self::$data['title'] .= self::$data['product']->ptitle;
 				 }
@@ -77,7 +77,7 @@
 				 if(Cart::isEmpty()) {
 						return redirect('shop');
 				 } else {
-						if( ! Session::has('user_id') ) {
+						if(!Session::has('user_id')) {
 							 return redirect('user/signin?rt=shop/cart');
 						} else {
 							 Order::saveNew();

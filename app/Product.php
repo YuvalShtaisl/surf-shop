@@ -4,7 +4,6 @@
 	 
 	 use Cart;
 	 use DB;
-	 use function dd;
 	 use Illuminate\Database\Eloquent\Model;
 	 
 	 class Product extends Model
@@ -48,7 +47,7 @@
 											$product['ptitle'],
 											$product['price'],
 											1,
-											['curl' => $product['curl'], 'pimage' => $product['pimage']]) ? 1 : 0;
+											['curl' => $product['curl'], 'pimage' => $product['pimage'],'purl' => $product['purl'],]) ? 1 : 0;
 							 }
 							 return 0;
 						}

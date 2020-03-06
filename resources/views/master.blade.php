@@ -10,7 +10,7 @@
 <!--[if gt IE 9]><!-->
 <html class="no-js" lang="en-US"><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
-<head  >
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,8 +41,8 @@
                 <li><a href="{{url('user/signin')}}">sign in</a></li>
                 <li><a href="{{url('user/signup')}}">sign up</a></li>
             @else
-                <li><a href="{{url('user/profile')}}">{{Session::get('user_name')}}</a></li>
-            @if(Session::has('is_admin'))
+                <li><a href="">{{Session::get('user_name')}}</a></li>
+                @if(Session::has('is_admin'))
                     <li><a href="{{url('cms/dashboard')}}">Admin Panel</a></li>
                 @endif
                 <li><a href="{{url('user/logout')}}">log out</a></li>
@@ -62,29 +62,35 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{url('')}}">
-                    <img src="" alt="Yuval Theme">
+                    <img src="img/looogoooo.png" alt="Yuval Theme">
                 </a>
             </div>
             <ul class="navbar-nav navbar-icons">
                 <li class="shopping-cart">
                     <a href="" class="li-icon" data-toggle="dropdown" aria-haspopup="false"
                        aria-expanded="false"><i class="lil-shopping_cart"></i>
-                            <span class="badge">{{Cart::getTotalQuantity()}}</span>
+                        <span class="badge">{{Cart::getTotalQuantity()}}</span>
                     </a>
 
                     <ul class="dropdown-menu">
                         <div class="dropdown-wrap" slim-scroll="√">
                             @foreach(Cart::getContent() as $cartItem)
                                 <li>
-                                    <a href=""><img src="" class="img-responsive product-img" alt=""></a>
-                                    <div class="product-details"><p class="product-title clearfix"><a
-                                                    href="">{{$cartItem->title}}</a></p>
-                                        @if( !Cart::isEmpty() )
-                                            <p class="product-price clearfix"><ins><span
-                                                            class="amount">{{$cartItem->price}}</span></ins></p>
-                                        @endif
+                                    <a href="{{url('shop/'.$cartItem->attributes->curl . '/' . $cartItem->attributes->purl)}}">
+                                        <img src="{{asset('img/' . $cartItem->attributes->pimage)}}" class="img-responsive
+                                    product-img">
+                                    </a>
+                                    <div class="product-details">
+                                        <p class="product-title clearfix">
+                                            <a href="{{url('shop/'.$cartItem->attributes->curl . '/' . $cartItem->attributes->purl)}}">
+                                                {{$cartItem->name}}
+                                            </a>
+                                        </p>
+                                        <div class="product-price clearfix">${{$cartItem->price}}</div>
                                     </div>
+
                                 </li>
+
                             @endforeach
                         </div>
                         <li class="dropdown-footer">
@@ -98,17 +104,21 @@
                 <ul class="nav navbar-nav navbar-left">
 
                     <li><a href="{{url('')}}">safe zone</a></li>
-                    <li><a href="{{url('shop')}}">Shop</a></li>
-                    <li>
-                        <a href="#!" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Pages <i
-                                    class="caret"></i></a>
+                    <li><a href="{{url('shop')}}" data-toggle="dropdown" aria-haspopup="false"
+                            aria-expanded="false">Categories<i class="caret"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="page.html">Page Default</a></li>
-                            <li><a href="login-register.html">Login / Register</a></li>
-                            <li><a href="404.html">Not Found (404)</a></li>
-                            <li><a href="faqs.html">FAQ'S</a></li>
+                            @isset($categories)
+                                @foreach($categories as $category)
+                                    <li><a href="{{url('shop/' .$category['curl'])}}">{{$category['ctitle']}}</a></li>
+                                @endforeach
+                            @endisset
+                            <li><a href="{{url('shop')}}">Categories Page</a></li>
                         </ul>
                     </li>
+                    @foreach($menu as $item)
+                        <li><a href="{{url($item['url'])}}">{{$item['link']}}</a></li>
+                    @endforeach
+                    <li><a href="{{url('shop')}}">All Categories</a></li>
                     <li><a href="{{url('about')}}">About</a></li>
                     <li><a href="{{url('contact')}}">Contact</a></li>
                 </ul>
@@ -125,10 +135,8 @@
                     <h3 class="widget-title">surf shop</h3>
                     <p>We are a surfing company which was established in 1986, since we deal in the personal design of
                         surfboards for surfers around the world, our expertise is surfing trips in the world, since 1986
-                        we do not stop traveling
-
-                        The surfboards and trips around the world gave us the option of knowing what is good for you as
-                        a beginner to a professional surfer, we will prepare you for the right spot</p>
+                        we do not stop traveling.
+                        </p>
                 </div><!-- ./widget -->
                 <div class="col-sm-3 widget widget-links">
                     <h3 class="widget-title">My Account</h3>
