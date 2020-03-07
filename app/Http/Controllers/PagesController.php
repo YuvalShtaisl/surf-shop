@@ -5,10 +5,6 @@
 	 use App\Categorie;
 	 use App\Menu;
 	 use App\Product;
-	 use function count;
-	 use function dd;
-	 use function is_array;
-	 use function redirect;
 	 use function view;
 	 
 	 class PagesController extends MainController
