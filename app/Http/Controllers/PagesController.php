@@ -5,7 +5,10 @@
 	 use App\Categorie;
 	 use App\Menu;
 	 use App\Product;
-	 use Cart;
+	 use function count;
+	 use function dd;
+	 use function is_array;
+	 use function redirect;
 	 use function view;
 	 
 	 class PagesController extends MainController
@@ -14,9 +17,12 @@
 			{
 				 self::$data['title'] .= 'Home-Page';
 				 self::$data['categories'] = Categorie::all();
-				 self::$data['products'] = Product::select('products.*','c.curl')->join('categories as c','c.id','=','products.categorie_id')
-								 ->limit(6)->orderBy('created_at',
-						 'desc')->get();
+				 self::$data['products'] = Product::select('products.*',
+						 'c.curl')->join('categories as c',
+						 'c.id',
+						 '=',
+						 'products.categorie_id')->limit(6)->orderBy('created_at',
+								 'desc')->get();
 				 return view('content.home',
 						 self::$data);
 			}
@@ -38,12 +44,25 @@
 			
 			public function dynamicLink($dynamic)
 			{
+				 $result = Menu::where('url',
+						 '=',
+						 $dynamic)->with('content')->get();
 				 
-				 self::$data['content'] = Menu::where('url',  '=',  $dynamic)->with('content')->get()->first()
-						 ->content->article;
+				
 				 
-				 self::$data['title'] .= 'about-us';
-				 return view('content.dynamic',
-						 self::$data);
+				if($result->count()){
+					 $content = $result->first()->content->article;
+					 self::$data['content'] = $content;
+					 self::$data['title'] .= 'abut-us';
+					 return view('content.dynamic',
+							 self::$data);
+				}
+				
+				else{
+					
+					  return abort(404);
+				
+				}
+				
 			}
 	 }
