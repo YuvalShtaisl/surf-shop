@@ -27,7 +27,8 @@
                                         <label for="menu-id">Menu Item</label>
                                         <select id="menu-id" name="menu_id" class="form-control">
                                             @foreach($menu as $row)
-                                                <option @if($row['id'] == $item['id']) selected="selected" @endif>
+                                                <option value="{{$row['id']}}"@if($row['id'] == $item['id'])
+                                                selected="selected" @endif>
                                                     {{$row['link']}}
                                                 </option>
                                             @endforeach
@@ -80,7 +81,4 @@
         </div> <!-- /container -->
 
     </div> <!-- /main -->
-
-
-
 @endsection

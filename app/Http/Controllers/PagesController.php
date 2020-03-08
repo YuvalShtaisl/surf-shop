@@ -17,7 +17,7 @@
 						 'c.curl')->join('categories as c',
 						 'c.id',
 						 '=',
-						 'products.categorie_id')->limit(6)->orderBy('created_at',
+						 'products.categorie_id')->limit(8)->orderBy('created_at',
 								 'desc')->get();
 				 return view('content.home',
 						 self::$data);
@@ -42,19 +42,19 @@
 			{
 				 $result = Menu::where('url',
 						 '=',
-						 $dynamic)->with('content')->get();
+						 $dynamic)->with('contents')->get();
 				 
 				
-				 
-				if($result->count()){
-					 $content = $result->first()->content->article;
-					 self::$data['content'] = $content;
-					 self::$data['title'] .= 'abut-us';
+				if($result->count() && ($contents = $result->first()->contents->first())){
+					 
+					 $title = $contents->title;
+					 $contents = $result->first()->contents;
+					 self::$data['contents'] = $contents;
+					 self::$data['title'] .= $title;
 					 return view('content.dynamic',
 							 self::$data);
 				}
-				
-				else{
+				else {
 					
 					  return abort(404);
 				

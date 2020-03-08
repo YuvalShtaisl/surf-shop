@@ -45,9 +45,9 @@
 				 $menu->save();
 			}
 			
-			public function content()
+			public function contents()
 			{
-				 return $this->hasOne(Content::class);
+				 return $this->hasMany(Content::class);
 				 
 			}
 	 }

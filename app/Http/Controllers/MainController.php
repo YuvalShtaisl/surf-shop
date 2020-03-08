@@ -12,6 +12,7 @@
 				 self::$data['categories'] = Categorie::all()->toArray();
 				 self::$data['menu'] = Menu::all()->toArray();
 				 
+				 
 			}
 			
 			public static $data = ['title' => 'SurfShop | '];
